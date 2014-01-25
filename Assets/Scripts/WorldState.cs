@@ -16,20 +16,21 @@ public class WorldState : MonoBehaviour {
 	
     public void Update() {
         if(Input.GetKeyDown(KeyCode.A)) {
-            UpdateWorld(GameWorld.human);
+            HandleUpdateWorld(GameWorld.human);
         } else if(Input.GetKeyDown(KeyCode.S)) {
-            UpdateWorld(GameWorld.race);
+            HandleUpdateWorld(GameWorld.race);
         } else if(Input.GetKeyDown(KeyCode.D)) {
-            UpdateWorld(GameWorld.dino);
+            HandleUpdateWorld(GameWorld.dino);
         } else if(Input.GetKeyDown(KeyCode.F)) {
-            UpdateWorld(GameWorld.space);
+            HandleUpdateWorld(GameWorld.space);
         }
     }
 
-    public void UpdateWorld(GameWorld newWorld) {
+    private void HandleUpdateWorld(GameWorld newWorld) {
         this.world = newWorld;
         foreach (WorldSwitcher obj in GameObject.FindObjectsOfType<WorldSwitcher>()) {
             obj.WorldSwitched(newWorld);
         }
+        SendMessage("UpdateWorld", newWorld);
     }
 }

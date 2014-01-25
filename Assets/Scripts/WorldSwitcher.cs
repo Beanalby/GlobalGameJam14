@@ -27,12 +27,11 @@ public class WorldSwitcher : MonoBehaviour {
         current = Instantiate(prefab) as GameObject;
         current.transform.position = transform.position;
         current.transform.rotation = transform.rotation;
-        // if it has a switcher, delete ourselves
-        Transform otherSwitcher = transform.Find("switcher");
-        if (otherSwitcher != null) {
-            //Destroy(gameObject);
-        } else {
-            transform.parent = current.transform;
+        if (current.tag == "Player") {
+            // cancel out any rolling we may have encountered
+            current.transform.rotation = Quaternion.Euler(
+                new Vector3(0, transform.rotation.eulerAngles.y, 0));
         }
+        transform.parent = current.transform;
     }
 }
