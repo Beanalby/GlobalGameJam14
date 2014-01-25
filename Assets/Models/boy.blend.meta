@@ -7,19 +7,24 @@ ModelImporter:
     100002: //RootNode
     100004: Car
     100006: Dino
+    100008: Space
     400000: Boy
     400002: //RootNode
     400004: Car
     400006: Dino
+    400008: Space
     2300000: Boy
     2300002: Car
     2300004: Dino
+    2300006: Space
     3300000: Boy
     3300002: Car
     3300004: Dino
+    3300006: Space
     4300000: Car
     4300002: Dino
     4300004: Boy
+    4300006: Space
     7400000: Default Take
     9500000: //RootNode
   materials:
