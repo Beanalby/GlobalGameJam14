@@ -6,12 +6,10 @@ public class WorldSwitcher : MonoBehaviour {
     public GameObject humanVersion, raceVersion, dinoVersion, spaceVersion;
 
     public void WorldSwitched(GameWorld world) {
-        Debug.Log("Switching to " + world);
         GameObject current = transform.parent.gameObject;
         transform.parent = null;
         transform.position = current.transform.position;
         transform.rotation = current.transform.rotation;
-        Debug.Log("Destroying " + current.name);
         Destroy(current);
         GameObject prefab = null;
         switch (world) {
