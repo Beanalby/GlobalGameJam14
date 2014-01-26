@@ -4,7 +4,7 @@ using System.Collections;
 public class FollowCamera : MonoBehaviour {
     private GameObject target = null;
     private float distance = 3f;
-    private float height = .5f;
+    private float height = 1f;
 
     private float angleVelocity = 0;
     private float angularSmoothLag = 0.3f;

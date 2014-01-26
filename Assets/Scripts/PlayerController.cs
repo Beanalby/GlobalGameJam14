@@ -10,7 +10,9 @@ public class PlayerController : MonoBehaviour {
     private WorldControl wc;
     private bool needsCentered = true;
 
-    private bool canControl = true;
+    public bool canControl = true;
+    public bool faceVelocity = false;
+
     public bool CanControl {
         get { return canControl; }
     }
@@ -31,6 +33,9 @@ public class PlayerController : MonoBehaviour {
     void HandleMoving() {
         currentSpeed = 0;
         if (!canControl) {
+            if (faceVelocity) {
+                rigidbody.MoveRotation(Quaternion.LookRotation(rigidbody.velocity));
+            }
             return;
         }
         if (wc.showingMenu) {
@@ -58,10 +63,21 @@ public class PlayerController : MonoBehaviour {
 
     public void GotHit(GameObject attacker) {
         Vector3 throwDir = attacker.transform.TransformDirection(Vector3.forward);
-        //Vector3 throwDir = attacker.transform.rotation.eulerAngles.normalized;
         throwDir.y = 1;
-        rigidbody.velocity = throwDir * throwStrength;
+        throwDir *= throwStrength;
+        Fling(throwDir, false);
+    }
+
+    public void Fling(Vector3 direction, bool face) {
+        // first move us up a little, so we don't immediately collide with the ground
+        Vector3 pos = transform.position;
+        pos.y += .3f;
+        transform.position = pos;
+
+        // apply our new velocity
+        rigidbody.velocity = direction;
         canControl = false;
+        this.faceVelocity = face;
     }
 
     public void OnCollisionEnter(Collision collision) {

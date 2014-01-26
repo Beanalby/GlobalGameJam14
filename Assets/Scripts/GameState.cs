@@ -6,12 +6,6 @@ public class GameState : MonoBehaviour {
     public int Pickups {
         get { return pickups; }
     }
-    private WorldState state;
-
-    public void Start() {
-        state = GameObject.Find("WorldState").GetComponent<WorldState>();
-    }
-
 
     public void AddPickup() {
         pickups++;

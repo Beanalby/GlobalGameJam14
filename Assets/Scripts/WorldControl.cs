@@ -10,8 +10,12 @@ public class WorldControl : MonoBehaviour {
     private bool needsCentered;
     private WorldState state;
 
+    private Vector3 normalGravity, spaceGravity;
+
     public void Start() {
         state = GetComponent<WorldState>();
+        normalGravity = Physics.gravity;
+        spaceGravity = normalGravity / 2;
     }
 
     public void Update() {
@@ -48,6 +52,11 @@ public class WorldControl : MonoBehaviour {
             obj.WorldSwitched(newWorld);
         }
         SendMessage("UpdateWorld", newWorld);
+        if (newWorld == GameWorld.space) {
+            Physics.gravity = spaceGravity;
+        } else {
+            Physics.gravity = normalGravity;
+        }
     }
 
     public void OnGUI() {
