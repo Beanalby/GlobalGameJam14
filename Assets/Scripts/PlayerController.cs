@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour {
     public bool canControl = true;
     public bool faceVelocity = false;
 
+    WorldState state;
+
     public bool CanControl {
         get { return canControl; }
     }
@@ -20,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     private Animator animator;
 
     public void Start() {
+        state = GameObject.Find("WorldState").GetComponent<WorldState>();
         animator = GetComponentInChildren<Animator>();
         wc = GameObject.Find("WorldState").GetComponent<WorldControl>();
     }
@@ -50,7 +53,11 @@ public class PlayerController : MonoBehaviour {
             }
         }
         Vector3 rot = rigidbody.rotation.eulerAngles;
-        rot.y += Input.GetAxis("Horizontal") * Time.deltaTime * turnSpeed;
+        float turnAmount = Input.GetAxis("Horizontal") * Time.deltaTime * turnSpeed;
+        if (state.world == GameWorld.race && Input.GetAxis("Vertical") < 0) {
+            turnAmount = -turnAmount;
+        }
+        rot.y += turnAmount;
         rigidbody.MoveRotation(Quaternion.Euler(rot));
 
         if(Input.GetAxis("Vertical") != 0) {
