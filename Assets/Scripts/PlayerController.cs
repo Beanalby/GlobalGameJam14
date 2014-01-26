@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour {
             return;
         }
         if (needsCentered) {
-            if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0) {
+            if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0) {
                 needsCentered = false;
             } else {
                 return;

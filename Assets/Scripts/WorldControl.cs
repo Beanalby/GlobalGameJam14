@@ -15,7 +15,7 @@ public class WorldControl : MonoBehaviour {
     public void Start() {
         state = GetComponent<WorldState>();
         normalGravity = Physics.gravity;
-        spaceGravity = normalGravity / 2;
+        spaceGravity = normalGravity / 4;
     }
 
     public void Update() {

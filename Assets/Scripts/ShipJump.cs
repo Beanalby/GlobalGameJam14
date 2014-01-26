@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ShipJump : MonoBehaviour {
 
-    private float jumpStrength = 4;
+    private float jumpStrength = 3;
 
     private PlayerController pc;
 
