@@ -3,8 +3,8 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-    private float speed = 5;
-    private float turnSpeed = 75;
+    public  float speed = 5;
+    public float turnSpeed = 75;
     private float throwStrength = 5f;
 
     private WorldControl wc;
