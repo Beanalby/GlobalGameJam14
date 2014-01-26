@@ -7,8 +7,7 @@ public class PlayerController : MonoBehaviour {
     private float turnSpeed = 75;
 
     private WorldControl wc;
-
-    private bool needsCentered = false;
+    private bool needsCentered = true;
 
     public void Start() {
         wc = GameObject.Find("WorldState").GetComponent<WorldControl>();
@@ -31,8 +30,6 @@ public class PlayerController : MonoBehaviour {
 
         if(Input.GetAxis("Vertical") != 0) {
             Vector3 pos = rigidbody.position;
-            //Debug.Log("Transformed is " + transform.TransformDirection(Vector3.forward)
-            //    + ", doing " + (transform.TransformDirection(Vector3.forward) * Input.GetAxis("Vertical") * speed));
             pos += transform.TransformDirection(Vector3.forward) * Input.GetAxis("Vertical") * Time.deltaTime * speed;
             rigidbody.MovePosition(pos);
         }
