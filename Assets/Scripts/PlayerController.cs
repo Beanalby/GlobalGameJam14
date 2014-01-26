@@ -11,11 +11,25 @@ public class PlayerController : MonoBehaviour {
     private bool needsCentered = true;
 
     private bool canControl = true;
+    public bool CanControl {
+        get { return canControl; }
+    }
+    private float currentSpeed = 0;
+    private Animator animator;
 
     public void Start() {
+        animator = GetComponentInChildren<Animator>();
         wc = GameObject.Find("WorldState").GetComponent<WorldControl>();
     }
     public void Update() {
+        HandleMoving();
+        if(animator) {
+            animator.SetFloat("Speed", Mathf.Abs(currentSpeed));
+        }
+    }
+
+    void HandleMoving() {
+        currentSpeed = 0;
         if (!canControl) {
             return;
         }
@@ -35,6 +49,7 @@ public class PlayerController : MonoBehaviour {
         rigidbody.MoveRotation(Quaternion.Euler(rot));
 
         if(Input.GetAxis("Vertical") != 0) {
+            currentSpeed = Input.GetAxis("Vertical") * Time.deltaTime * speed;
             Vector3 pos = rigidbody.position;
             pos += transform.TransformDirection(Vector3.forward) * Input.GetAxis("Vertical") * Time.deltaTime * speed;
             rigidbody.MovePosition(pos);
@@ -42,10 +57,6 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void GotHit(GameObject attacker) {
-        // dino doesn't get thrown
-        if (GameObject.Find("WorldState").GetComponent<WorldState>().world == GameWorld.dino) {
-            return;
-        }
         Vector3 throwDir = attacker.transform.TransformDirection(Vector3.forward);
         //Vector3 throwDir = attacker.transform.rotation.eulerAngles.normalized;
         throwDir.y = 1;
