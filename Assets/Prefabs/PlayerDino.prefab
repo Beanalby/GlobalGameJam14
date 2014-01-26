@@ -277,6 +277,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400036}
+  - 114: {fileID: 11400004}
+  m_Layer: 0
+  m_Name: PlayerSwitcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -289,6 +305,7 @@ Transform:
   m_Children:
   - {fileID: 400002}
   - {fileID: 400034}
+  - {fileID: 400036}
   m_Father: {fileID: 0}
 --- !u!4 &400002
 Transform:
@@ -492,6 +509,17 @@ Transform:
   - {fileID: 400032}
   - {fileID: 400030}
   m_Father: {fileID: 400000}
+--- !u!4 &400036
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100036}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: -6.79537153}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400000}
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -555,6 +583,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63ff913f0a6a6aa4f9dd9211668c7ae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43026cb3e790d2c4b847cfc4c01a7e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  humanVersion: {fileID: 100004, guid: dd78384f7e405384191b5096813295c5, type: 2}
+  raceVersion: {fileID: 100000, guid: f194209c64699714b875a526480a83d5, type: 2}
+  dinoVersion: {fileID: 100000}
+  spaceVersion: {fileID: 100002, guid: 3e12ceab309c02844b7deb169d88ec9f, type: 2}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
