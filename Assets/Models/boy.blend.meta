@@ -8,11 +8,37 @@ ModelImporter:
     100004: Car
     100006: Dino
     100008: Space
+    100010: Armature
+    100012: Bone
+    100014: Bone_001
+    100016: Bone_002
+    100018: Bone_003
+    100020: Bone_004
+    100022: Bone_005
+    100024: Bone_006
+    100026: Bone_007
+    100028: Bone_008
+    100030: Bone_009
+    100032: Bone_010
+    100034: Bone_011
     400000: Boy
     400002: //RootNode
     400004: Car
     400006: Dino
     400008: Space
+    400010: Armature
+    400012: Bone
+    400014: Bone_001
+    400016: Bone_002
+    400018: Bone_003
+    400020: Bone_004
+    400022: Bone_005
+    400024: Bone_006
+    400026: Bone_007
+    400028: Bone_008
+    400030: Bone_009
+    400032: Bone_010
+    400034: Bone_011
     2300000: Boy
     2300002: Car
     2300004: Dino
@@ -26,7 +52,10 @@ ModelImporter:
     4300004: Boy
     4300006: Space
     7400000: Default Take
+    7400002: idle
+    7400004: walk
     9500000: //RootNode
+    13700000: Boy
   materials:
     importMaterials: 0
     materialName: 0
@@ -41,7 +70,175 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_001
+        weight: 1
+      - path: Armature/Bone/Bone_002
+        weight: 1
+      - path: Armature/Bone/Bone_002/Bone_003
+        weight: 1
+      - path: Armature/Bone/Bone_004
+        weight: 1
+      - path: Armature/Bone/Bone_004/Bone_005
+        weight: 1
+      - path: Armature/Bone/Bone_010
+        weight: 1
+      - path: Armature/Bone/Bone_010/Bone_011
+        weight: 1
+      - path: Armature/Bone_006
+        weight: 1
+      - path: Armature/Bone_006/Bone_007
+        weight: 1
+      - path: Armature/Bone_008
+        weight: 1
+      - path: Armature/Bone_008/Bone_009
+        weight: 1
+      - path: Boy
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: idle
+      takeName: idle
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_001
+        weight: 1
+      - path: Armature/Bone/Bone_002
+        weight: 1
+      - path: Armature/Bone/Bone_002/Bone_003
+        weight: 1
+      - path: Armature/Bone/Bone_004
+        weight: 1
+      - path: Armature/Bone/Bone_004/Bone_005
+        weight: 1
+      - path: Armature/Bone/Bone_010
+        weight: 1
+      - path: Armature/Bone/Bone_010/Bone_011
+        weight: 1
+      - path: Armature/Bone_006
+        weight: 1
+      - path: Armature/Bone_006/Bone_007
+        weight: 1
+      - path: Armature/Bone_008
+        weight: 1
+      - path: Armature/Bone_008/Bone_009
+        weight: 1
+      - path: Boy
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: walk
+      takeName: walk
+      firstFrame: -1
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_001
+        weight: 1
+      - path: Armature/Bone/Bone_002
+        weight: 1
+      - path: Armature/Bone/Bone_002/Bone_003
+        weight: 1
+      - path: Armature/Bone/Bone_004
+        weight: 1
+      - path: Armature/Bone/Bone_004/Bone_005
+        weight: 1
+      - path: Armature/Bone/Bone_010
+        weight: 1
+      - path: Armature/Bone/Bone_010/Bone_011
+        weight: 1
+      - path: Armature/Bone_006
+        weight: 1
+      - path: Armature/Bone_006/Bone_007
+        weight: 1
+      - path: Armature/Bone_008
+        weight: 1
+      - path: Armature/Bone_008/Bone_009
+        weight: 1
+      - path: Boy
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -75,7 +272,7 @@ ModelImporter:
     armStretch: .0500000007
     legStretch: .0500000007
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: Armature
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   additionalBone: 0
