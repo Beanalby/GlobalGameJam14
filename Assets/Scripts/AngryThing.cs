@@ -63,7 +63,7 @@ public class AngryThing : MonoBehaviour {
         } else {
             dest.z = target.transform.position.z;
         }
-        transform.position = Vector3.Lerp(transform.position, dest, .1f);
+        transform.position = Vector3.Lerp(transform.position, dest, .2f);
     }
 
     private void HandleStun() {
