@@ -428,6 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1adbf4950d22a847b007ddbcfce6e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickedUp: 0
 --- !u!65 &192060981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1036,6 +1037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1adbf4950d22a847b007ddbcfce6e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickedUp: 0
 --- !u!65 &342421119
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4100,6 +4102,10 @@ Prefab:
       propertyPath: m_Name
       value: juiceBox3
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 97ce4a5eca109094e9637e2851df187b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97ce4a5eca109094e9637e2851df187b, type: 2}
   m_RootGameObject: {fileID: 1540020042}
@@ -5581,6 +5587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1adbf4950d22a847b007ddbcfce6e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickedUp: 0
 --- !u!1001 &1589803983
 Prefab:
   m_ObjectHideFlags: 0
@@ -5993,6 +6000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1adbf4950d22a847b007ddbcfce6e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickedUp: 0
 --- !u!65 &1721820426
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6492,6 +6500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1adbf4950d22a847b007ddbcfce6e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickedUp: 0
 --- !u!65 &1835439437
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6591,6 +6600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1adbf4950d22a847b007ddbcfce6e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickedUp: 0
 --- !u!65 &1839129238
 BoxCollider:
   m_ObjectHideFlags: 0
